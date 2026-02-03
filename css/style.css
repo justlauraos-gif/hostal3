@@ -421,6 +421,7 @@ height: 80vh;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 3px;
+    cursor: pointer;
 }
 .btn-reserva-principal {
     display: inline-block;
@@ -440,29 +441,49 @@ height: 80vh;
     transform: scale(1.05);
 }
 
-/* --- VISOR DE FOTO (LIGHTBOX) --- */
-.visor-foto {
+/* --- NUEVO VISOR CON SWIPE (LIGHTBOX) --- */
+.visor-overlay {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     z-index: 2000;
     justify-content: center;
     align-items: center;
 }
 
-.visor-foto:target { display: flex; }
+.swiper-visor {
+    width: 100%;
+    height: 100%;
+}
 
-.visor-foto img {
+.swiper-visor .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-visor img {
     max-width: 90%;
     max-height: 80%;
     border: 2px solid white;
+    object-fit: contain;
 }
 
-.cerrar {
+.cerrar-visor {
     position: absolute;
-    width: 100%; height: 100%;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+/* Flechas solo para PC en el visor */
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
 }
 
 .btn-directo {
@@ -481,6 +502,41 @@ height: 80vh;
        text-transform: uppercase;
        font-weight: 800;
 
+}
+
+.pagina-legal {
+    padding: 8rem 1.5rem 4rem; /* Espacio para el header fijo */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedor-legal h1 {
+    color: #75251F;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.contenedor-legal h2 {
+    color: #A34135;
+    margin-top: 2.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.contenedor-legal p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.introduccion {
+    font-style: italic;
+    color: #777;
+}
+
+.footer-bottom a {
+    color: #dadada;
 }
 
 /* --- PC --- */
@@ -562,7 +618,7 @@ header img{
         font-size: 1.4rem;
     }
 
-    .notas-tarifas {
+    .notes-tarifas {
         margin-top: 3rem;
         padding: 2rem;
         font-size: 1rem;
@@ -592,6 +648,7 @@ header img{
         transform: scale(1.05);
         cursor: pointer;
     }
-
-
+.pagina-legal {
+        padding-top: 10rem;
+    }
 }

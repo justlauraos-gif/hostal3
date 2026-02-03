@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostal Don Juan - Ubicación</title>
+    <title>Hostal Don Juan - Habitaciones</title>
+    <meta name="description" content="Explora nuestras habitaciones abuhardilladas y dobles con terraza. Equipadas con aire acondicionado, wifi, minibar y baño privado para una estancia perfecta.">
+    <link rel="canonical" href="https://www.hostaldonjuantorredelmar.es/habitaciones.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 <body>
 
@@ -31,119 +36,153 @@
     </header>
 
     <main class="pagina-habitaciones">
-    <section class="servicios-generales">
-        <h1>Nuestras Habitaciones</h1>
-        <h4>Todas nuestras estancias están equipadas con lo necesario para su descanso:</h4>
-        <p>Wifi, televisión, calefacción, aire acondicionado, minibar, hervidor de agua, cambio de toallas diario, baño privado...</p>
-        <a href="contacto.html" class="btn-reserva-principal">RESERVAR AHORA</a>
-    </section>
+        <section class="servicios-generales">
+            <h1>Nuestras Habitaciones</h1>
+            <h4>Todas nuestras estancias están equipadas con lo necesario para su descanso:</h4>
+            <p>Wifi, televisión, calefacción, aire acondicionado, minibar, hervidor de agua, cambio de toallas diario, baño privado...</p>
+            <a href="contacto.html" class="btn-reserva-principal">RESERVAR AHORA</a>
+        </section>
 
-    <section class="seccion-habitacion">
-        <div class="habitacion-texto">
-            <h2>Habitación Abuhardillada 1</h2>
-        </div>
+        <section class="seccion-habitacion">
+            <div class="habitacion-texto">
+                <h2>Habitación Abuhardillada 1</h2>
+            </div>
+            <div class="mosaico-habitacion">
+                <img src="img/h1_1.webp" alt="Foto 1" onclick="abrirVisor(0, 'h1')">
+                <img src="img/h1_2.webp" alt="Foto 2" onclick="abrirVisor(1, 'h1')">
+                <img src="img/h1_3.webp" alt="Foto 3" onclick="abrirVisor(2, 'h1')">
+                <img src="img/h1_4.webp" alt="Foto 4" onclick="abrirVisor(3, 'h1')">
+                <img src="img/h1_5.webp" alt="Foto 5" onclick="abrirVisor(4, 'h1')">
+                <img src="img/h1_6.webp" alt="Foto 6" onclick="abrirVisor(5, 'h1')">
+            </div>
 
-        <div class="mosaico-habitacion">
-            <a href="#h1-img1"><img src="img/h1_1.webp" alt="Foto 1"></a>
-            <a href="#h1-img2"><img src="img/h1_2.webp" alt="Foto 2"></a>
-            <a href="#h1-img3"><img src="img/h1_3.webp" alt="Foto 3"></a>
-            <a href="#h1-img4"><img src="img/h1_4.webp" alt="Foto 4"></a>
-            <a href="#h1-img5"><img src="img/h1_5.webp" alt="Foto 5"></a>
-            <a href="#h1-img6"><img src="img/h1_6.webp" alt="Foto 6"></a>
-        </div>
+            <div class="habitacion-texto">
+                <h2>Habitación Abuhardillada 2</h2>
+            </div>
+            <div class="mosaico-habitacion">
+                <img src="img/h2_1.webp" alt="Foto 1" onclick="abrirVisor(0, 'h2')">
+                <img src="img/h2_2.webp" alt="Foto 2" onclick="abrirVisor(1, 'h2')">
+                <img src="img/h2_3.webp" alt="Foto 3" onclick="abrirVisor(2, 'h2')">
+                <img src="img/h2_4.webp" alt="Foto 4" onclick="abrirVisor(3, 'h2')">
+                <img src="img/h2_5.webp" alt="Foto 5" onclick="abrirVisor(4, 'h2')">
+                <img src="img/h2_6.webp" alt="Foto 6" onclick="abrirVisor(5, 'h2')">
+            </div>
 
-            <div id="h1-img1" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_1.webp"></div>
-            <div id="h1-img2" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_2.webp"></div>
-            <div id="h1-img3" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_3.webp"></div>
-            <div id="h1-img4" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_4.webp"></div>
-            <div id="h1-img5" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_5.webp"></div>
-            <div id="h1-img6" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h1_6.webp"></div>
+            <div class="habitacion-texto">
+                <h2>Habitación con terraza A</h2>
+            </div>
+            <div class="mosaico-habitacion">
+                <img src="img/h3_1.webp" alt="Foto 1" onclick="abrirVisor(0, 'h3')">
+                <img src="img/h3_2.webp" alt="Foto 2" onclick="abrirVisor(1, 'h3')">
+                <img src="img/h3_3.webp" alt="Foto 3" onclick="abrirVisor(2, 'h3')">
+                <img src="img/h3_4.webp" alt="Foto 4" onclick="abrirVisor(3, 'h3')">
+                <img src="img/h3_5.webp" alt="Foto 5" onclick="abrirVisor(4, 'h3')">
+                <img src="img/h3_6.webp" alt="Foto 6" onclick="abrirVisor(5, 'h3')">
+            </div>
 
-        <div class="habitacion-texto">
-            <h2>Habitación Abuhardillada 2</h2>
-        </div>
+            <div class="habitacion-texto">
+                <h2>Habitación con terraza B</h2>
+            </div>
+            <div class="mosaico-habitacion">
+                <img src="img/h4_1.webp" alt="Foto 1" onclick="abrirVisor(0, 'h4')">
+                <img src="img/h4_2.webp" alt="Foto 2" onclick="abrirVisor(1, 'h4')">
+                <img src="img/h4_3.webp" alt="Foto 3" onclick="abrirVisor(2, 'h4')">
+                <img src="img/h4_4.webp" alt="Foto 4" onclick="abrirVisor(3, 'h4')">
+                <img src="img/h4_5.webp" alt="Foto 5" onclick="abrirVisor(4, 'h4')">
+                <img src="img/h4_6.webp" alt="Foto 6" onclick="abrirVisor(5, 'h4')">
+            </div>
+        </section>
+    </main>
 
-        <div class="mosaico-habitacion">
-            <a href="#h2-img1"><img src="img/h2_1.webp" alt="Foto 1"></a>
-            <a href="#h2-img2"><img src="img/h2_2.webp" alt="Foto 2"></a>
-            <a href="#h2-img3"><img src="img/h2_3.webp" alt="Foto 3"></a>
-            <a href="#h2-img4"><img src="img/h2_4.webp" alt="Foto 4"></a>
-            <a href="#h2-img5"><img src="img/h2_5.webp" alt="Foto 5"></a>
-            <a href="#h2-img6"><img src="img/h2_6.webp" alt="Foto 6"></a>
-        </div>
-
-            <div id="h2-img1" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_1.webp"></div>
-            <div id="h2-img2" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_2.webp"></div>
-            <div id="h2-img3" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_3.webp"></div>
-            <div id="h2-img4" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_4.webp"></div>
-            <div id="h2-img5" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_5.webp"></div>
-            <div id="h2-img6" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h2_6.webp"></div>
-
-         <div class="habitacion-texto">
-            <h2>Habitación con terraza</h2>
-        </div>
-
-        <div class="mosaico-habitacion">
-            <a href="#h3-img1"><img src="img/h3_1.webp" alt="Foto 1"></a>
-            <a href="#h3-img2"><img src="img/h3_2.webp" alt="Foto 2"></a>
-            <a href="#h3-img3"><img src="img/h3_3.webp" alt="Foto 3"></a>
-            <a href="#h3-img4"><img src="img/h3_4.webp" alt="Foto 4"></a>
-            <a href="#h3-img5"><img src="img/h3_5.webp" alt="Foto 5"></a>
-            <a href="#h3-img6"><img src="img/h3_6.webp" alt="Foto 6"></a>
-        </div>
-
-            <div id="h3-img1" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_1.webp"></div>
-            <div id="h3-img2" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_2.webp"></div>
-            <div id="h3-img3" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_3.webp"></div>
-            <div id="h3-img4" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_4.webp"></div>
-            <div id="h3-img5" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_5.webp"></div>
-            <div id="h3-img6" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h3_6.webp"></div>
-
-         <div class="habitacion-texto">
-            <h2>Habitación con terraza</h2>
-        </div>
-
-        <div class="mosaico-habitacion">
-            <a href="#h4-img1"><img src="img/h4_1.webp" alt="Foto 1"></a>
-            <a href="#h4-img2"><img src="img/h4_2.webp" alt="Foto 2"></a>
-            <a href="#h4-img3"><img src="img/h4_3.webp" alt="Foto 3"></a>
-            <a href="#h4-img4"><img src="img/h4_4.webp" alt="Foto 4"></a>
-            <a href="#h4-img5"><img src="img/h4_5.webp" alt="Foto 5"></a>
-            <a href="#h4-img6"><img src="img/h4_6.webp" alt="Foto 6"></a>
-        </div>
-
-            <div id="h4-img1" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_1.webp"></div>
-            <div id="h4-img2" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_2.webp"></div>
-            <div id="h4-img3" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_3.webp"></div>
-            <div id="h4-img4" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_4.webp"></div>
-            <div id="h4-img5" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_5.webp"></div>
-            <div id="h4-img6" class="visor-foto"><a href="#c" class="cerrar"></a><img src="img/h4_6.webp"></div>
-    </section>
-</main>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-bloque">
-            <h4>Hostal Don Juan</h4>
-            <p>Tu descanso frente al mar en el corazón de Torre del Mar, Málaga.</p>
-        </div>
-
-        <div class="footer-bloque">
-            <h4>Reservas Directas</h4>
-            <p>Teléfono: +34 952 54 58 70</p>
-            <p>Email: reservas@hostaldonjuan.es</p>
-        </div>
-
-        <div class="footer-bloque">
-            <h4>Dirección</h4>
-            <p>C. Patrón Veneno, 14, 29740</p>
-            <p>Torre del Mar, Málaga, España</p>
+    <div id="visor-swiper" class="visor-overlay">
+        <span class="cerrar-visor" onclick="cerrarVisor()">&times;</span>
+        <div class="swiper swiper-visor">
+            <div class="swiper-wrapper" id="wrapper-dinamico">
+                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2026 Hostal Don Juan. Todos los derechos reservados.</p>
-    </div>
-</footer>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-bloque">
+                <h4>Hostal Don Juan</h4>
+                <p>Tu descanso frente al mar en el corazón de Torre del Mar, Málaga.</p>
+                <p style="font-size: 0.8rem; opacity: 0.7;">Reg. Turismo: H/MA/XXXXX</p>
+            </div>
+            <div class="footer-bloque">
+                <h4>Reservas Directas</h4>
+                <p>Teléfono: +34 952 54 58 70</p>
+                <p>Email: reservas@hostaldonjuantorredelmar.es</p>
+            </div>
+            <div class="footer-bloque">
+                <h4>Dirección</h4>
+                <p>C. Patrón Veneno, 14, 29740</p>
+                <p>Torre del Mar, Málaga, España</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hostal Don Juan. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="legal.html">Aviso Legal</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let mySwiper;
+        
+        // Función para abrir el visor táctil
+        function abrirVisor(index, grupo) {
+            const wrapper = document.getElementById('wrapper-dinamico');
+            wrapper.innerHTML = ''; // Limpiar fotos anteriores
+            
+            // Base de datos de imágenes por habitación
+            const fotos = {
+                'h1': ['img/h1_1.webp', 'img/h1_2.webp', 'img/h1_3.webp', 'img/h1_4.webp', 'img/h1_5.webp', 'img/h1_6.webp'],
+                'h2': ['img/h2_1.webp', 'img/h2_2.webp', 'img/h2_3.webp', 'img/h2_4.webp', 'img/h2_5.webp', 'img/h2_6.webp'],
+                'h3': ['img/h3_1.webp', 'img/h3_2.webp', 'img/h3_3.webp', 'img/h3_4.webp', 'img/h3_5.webp', 'img/h3_6.webp'],
+                'h4': ['img/h4_1.webp', 'img/h4_2.webp', 'img/h4_3.webp', 'img/h4_4.webp', 'img/h4_5.webp', 'img/h4_6.webp']
+            };
+
+            // Inyectar las fotos en el carrusel
+            fotos[grupo].forEach(src => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `<img src="${src}" alt="Vista ampliada">`;
+                wrapper.appendChild(slide);
+            });
+
+            // Mostrar el visor
+            const visor = document.getElementById('visor-swiper');
+            visor.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Bloquear scroll de fondo
+
+            // Iniciar Swiper
+            if (mySwiper) mySwiper.destroy();
+            mySwiper = new Swiper(".swiper-visor", {
+                initialSlide: index,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+
+        // Función para cerrar el visor
+        function cerrarVisor() {
+            document.getElementById('visor-swiper').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Recuperar scroll
+        }
+
+        // Cerrar al pulsar la tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") cerrarVisor();
+        });
+    </script>
 </body>
 </html>
