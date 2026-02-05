@@ -844,7 +844,7 @@ header img{
     }
 
     .mosaico-grid {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+        grid-template-columns: repeat(4, 1fr); /* Tres columnas iguales */
     }
 
     .mosaico-grid img {
