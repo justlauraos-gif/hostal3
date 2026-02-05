@@ -169,6 +169,7 @@ footer {
     border-bottom: 0.125rem solid #A34135;
     display: inline-block;
     padding-bottom: 0.3rem;
+    color: white;
 }
 
 .footer-bloque p {
@@ -193,7 +194,7 @@ header img{
 
 .inicio{
 height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/inicio-01.webp');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/inicio-02.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -230,6 +231,12 @@ height: 80vh;
     grid-template-columns: 100%;
     gap: 3rem;
     align-items: center;
+    width: 100%; /* Asegura que no use vw */
+    max-width: 75rem;
+    margin: 0 auto;
+            padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #dadada;
 }
 
 .galeria-texto h2 {
@@ -263,7 +270,7 @@ height: 80vh;
 }
 
 /* --- CARRUSEL DINÁMICO --- */
-.galeria-carrusel {
+.galeria-carrusel , .galeria-carrusel-2 {
     width: 100%;
     height: 22rem;
     border-radius: 0.5rem;
@@ -539,7 +546,137 @@ height: 80vh;
     color: #dadada;
 }
 
-/* --- PC --- */
+/* --- SECCIÓN TURISMO REFORZADA --- */
+.seccion-turismo {
+    padding: 5rem 1.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.contenedor-turismo {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 8rem; /* Más espacio entre los 3 bloques principales */
+}
+
+.texto-turismo h2 {
+    color: #A34135;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.texto-turismo p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+/* Rejilla de fotos 2x2 */
+.mosaico-turismo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.mosaico-turismo img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Fotos cuadradas para que la rejilla sea perfecta */
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.mosaico-turismo img:hover {
+    transform: scale(1.02);
+}
+
+
+/* --- PÁGINA OPINIONES --- */
+
+.inicio-plano {
+    height: 25vh; /* Un poco más corta que la de habitaciones al no tener foto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+    color: white;
+    margin-bottom: -4rem;
+}
+
+.inicio-plano h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #A34135;
+}
+
+.inicio-plano p {
+    font-size: 1.1rem;
+    color: black;
+}
+.seccion-opiniones {
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.contenedor-opiniones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-opinion {
+    background: #fdf2f1; /* Un tono rosado muy suave como el que usas */
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #A34135;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.estrellas {
+    color: #f1c40f; /* Color oro para las estrellas */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.tarjeta-opinion p {
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.autor {
+    font-weight: 800;
+    color: #75251F;
+    display: block;
+    text-align: right;
+}
+
+.cta-opiniones {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem;
+    background: white;
+    border: 2px dashed #A34135;
+    border-radius: 10px;
+}
+
+
+
+/* -----------------------------
+---------------------------------
+---------------- PC -------------
+---------------------------------
+------------------------------- */
+
 @media (min-width: 48rem) {
     header { padding: 1.5rem 5rem; }
 
@@ -573,11 +710,26 @@ height: 80vh;
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
     }
-    .contenedor-galeria {
-        grid-template-columns: 40% 60%;
+.contenedor-galeria {
+        grid-template-columns: 1fr 1fr; /* Cambiado de 50% 50% para evitar el desborde */
         gap: 5rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #dadada;
+        width: 100%;
     }
-    
+
+    /* --- NUEVO: Invertir orden en la segunda sección --- */
+    /* Seleccionamos la segunda sección de galería en el HTML */
+    .galeria .contenedor-galeria:nth-of-type(2) .galeria-carrusel {
+        grid-column: 1; /* Imagen a la izquierda */
+        grid-row: 1;
+    }
+
+    .galeria .contenedor-galeria:nth-of-type(2) .galeria-texto {
+        grid-column: 2; /* Texto a la derecha */
+        grid-row: 1;
+    }
     .galeria-carrusel {
         height: 32rem;
     }
@@ -651,4 +803,24 @@ header img{
 .pagina-legal {
         padding-top: 10rem;
     }
+ .contenedor-turismo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 6rem;
+    }
+
+    /* Solo el segundo bloque (Ocio) se invierte */
+    .invertido-turismo {
+        direction: rtl;
+    }
+
+    .invertido-turismo .texto-turismo, 
+    .invertido-turismo .mosaico-turismo {
+        direction: ltr;
+    }
+
+
+
+    
 }
