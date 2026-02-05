@@ -177,6 +177,7 @@ footer {
     line-height: 1.6;
     margin-bottom: 0.5rem;
     opacity: 0.9;
+    color: white;
 }
 
 .footer-bottom {
@@ -824,3 +825,4 @@ header img{
     
 
 }
+
